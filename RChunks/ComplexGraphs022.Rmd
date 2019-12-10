@@ -1,0 +1,9 @@
+
+```{r AddPolyCurve, fig.cap=FigCap} 
+Ozone.poly2 = lm(Ozone~poly(Wind,2, raw=TRUE), data=airquality) 
+Coeffs=coef(Ozone.poly2) 
+plot(Ozone~Wind, data=airquality) 
+curve(Coeffs[1]+Coeffs[2]*x+Coeffs[2]*x^2, min(airquality$Wind), max(airquality$Wind), add=TRUE) 
+```  
+ 
+

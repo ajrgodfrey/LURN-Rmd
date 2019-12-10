@@ -1,0 +1,5 @@
+```{r AirQuality-ScatterTempWind, fig.cap=FigCap} 
+plot(Wind, Temp) 
+``` 
+ 
+

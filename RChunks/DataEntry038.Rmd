@@ -1,0 +1,7 @@
+
+```{r Dates} 
+date() 
+class(date()) 
+```  
+ 
+

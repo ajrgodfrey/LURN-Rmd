@@ -1,0 +1,6 @@
+
+```{r ImportCSV2,eval=FALSE} 
+Chickens = read.csv("chickens.csv", row.names=1) 
+```  
+ 
+

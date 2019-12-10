@@ -1,0 +1,3 @@
+Note that the `sample()` command used here has created a random
+permutation of the numbers one to ten. 
+

@@ -1,0 +1,12 @@
+
+```{r ChSetup, include=FALSE, purl=FALSE}
+opts_chunk$set(fig.path='figures/') 
+chooseCRANmirror(ind=1)
+if(!require(tseries)) install.packages("tseries")
+if(!require(forecast)) install.packages("forecast")
+library(forecast)
+library(tseries)
+library(BrailleR)
+```  
+ 
+

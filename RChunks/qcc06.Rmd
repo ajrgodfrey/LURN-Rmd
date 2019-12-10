@@ -1,0 +1,13 @@
+MyChart=qcc(PChartData, sizes=100, type="p")
+```
+```{r }
+summary(MyChart)
+```
+```{r NPChart}
+MyChart=qcc(NPChartData, sizes=100, type="np", rules =shewhart.rules)
+```
+```{r }
+summary(MyChart)
+``` 
+ 
+

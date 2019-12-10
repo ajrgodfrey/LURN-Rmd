@@ -1,0 +1,10 @@
+## Differentiation
+
+The internal code used for differentiation in R is not as comprehensive
+as other mathematical software. It can handle arithmetic operators `+`, `-`, `\*`, `/`, and `^`, and the single-variable functions `exp()`, `log()` (natural logarithm), `sin()`, `cos()`, `tan()`, `sinh()`, `cosh()`, `sqrt()`, `pnorm()`, `dnorm()`, `asin()` (inverse sine), `acos()` (inverse cosine), `atan()` (inverse tangent), and various `gamma()` functions. The functions `pnorm()` and `dnorm()` are restricted to the standard
+normal distribution.
+
+The easiest way to find the derivative of an expression is to store the
+mathematical function using the `expression()` command, and then
+use the `D()` or `deriv()` commands. 
+

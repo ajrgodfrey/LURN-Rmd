@@ -1,0 +1,18 @@
+```{r include=FALSE}
+SVGName = "AirQuality-HistWind2"
+```
+```{r AirQuality-HistWind2, eval=ifelse(Blind, -1, 1), echo=ifelse(Blind, -1, 1), fig.cap=FigCap} 
+hist(Wind, xlab="Average wind speed (mph)", main="") 
+MyHist = hist(Wind, xlab="Average wind speed (mph)", main="") 
+    VI(MyHist)
+```
+
+```{r AirQuality-HistWindSVG2, eval=Blind, echo=FALSE}
+cat(paste0('
+attach(airquality)
+MyHist = hist(Wind) 
+MakeAccessibleSVG(MyHist, "SVGs/', SVGName, '", view=FALSE)
+detach(airquality)
+'),
+file="RunLater.R", append=TRUE)
+```

@@ -1,0 +1,10 @@
+﻿Having established the success of the code for the arrangement
+structure, we just open the graph window using the `layout()` command, and add plots in the order our labels specify. The full set of
+instructions is given in Figure \@ref(fig:Quakes-LayoutDiffSizes). Note that the
+graphs are chosen for the illustration of the `layout()` command, not for the purposes of showing anything of interest in any of
+the graphs created. The `quakes` data set distributed with the base installation of R is used in this illustration.
+
+```{r include=FALSE}
+FigCap="A selection of differing size graphs combined into one graph
+window"
+```

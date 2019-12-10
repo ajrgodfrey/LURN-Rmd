@@ -1,0 +1,10 @@
+```{r Hist, fig.cap=FigCap}
+VI(hist(airquality$Wind, xlab="Average wind speed (mph)", main="")) 
+```
+
+```{r HistSVG, eval=Blind, echo=FALSE, include=FALSE, messages=FALSE, warnings=FALSE, results="hide"} 
+MakeAccessibleSVG(hist(airquality$Wind, xlab="Average wind speed (mph)", main=""), "figures/VIHistAirQualityWind") 
+``` 
+[Link to SVG version](../SVGs/VIHistAirQualityWind.html)  
+ 
+

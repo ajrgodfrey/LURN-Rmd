@@ -1,0 +1,10 @@
+
+## Use of the dplyr package for data summarisation {#DPlyRDataSummarisation}
+
+In Section \@ref(DPlyRDataManipulation) , we saw how the
+`dplyr` package [@Rpkg-dplyr] offers an alternative to base R functionality
+for manipulating data. We now see that this package offers commands for
+summarising data. In particular, the commands: `group\_by()`, `summarise()`, and `count()`.
+
+You’ll need to install the package (see Section \@ref(InstallPackages) for instructions) before running the function 
+

@@ -1,0 +1,6 @@
+[Link to SVG version](../SVGs/ComplexGraphsIrisInColour-1.html)
+
+```{r include=FALSE}
+FigCap="Petal length and width plotted using different symbols for
+representing species. "
+```

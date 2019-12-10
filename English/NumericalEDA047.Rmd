@@ -1,0 +1,5 @@
+As an illustration of the real power of the pipe operator , say we
+wanted to show the hottest months by their average temperature within
+the air quality data. One way to do this using commands from the
+`dplyr` package is to: 
+

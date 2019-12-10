@@ -1,0 +1,6 @@
+
+```{r SortedTApply} 
+sort(tapply(Wind, Month, mean)) 
+```  
+ 
+

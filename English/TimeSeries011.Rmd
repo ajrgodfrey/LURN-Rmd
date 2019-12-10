@@ -1,0 +1,27 @@
+﻿[Link to SVG version](../SVGs/TSPlotsCompared-1.html)
+
+[Link to SVG version](../SVGs/TSPlotsCompared-2.html)
+```{r include=FALSE}
+BlindOrSightedText = ifelse(Blind, "### A note on the visual appearance of the standard time series plot (written for blind users)",
+"")
+```
+
+`r BlindOrSightedText` `r if(Blind){Describe(TimeSeriesPlot(airquality$Wind))$general}` 
+
+## Smoothing of a time series using moving averages {#MovingAverages}
+
+One simple method for smoothing out a time series in order to expose its
+behaviour is to smooth out the observed data using the
+`filter()` command to create a moving average. A moving average
+is often centred, (using the argument `sides=2` ) but if the
+series is expected to have no trend, then a backwards only
+(`sides=1` ) focus can be taken. We must determine the width
+of the moving average, usually using odd-numbered widths.
+
+Figure \@ref(fig:FilterExample) shows how different amounts of data can
+be averaged to change the amount of smoothing.
+
+```{r include=FALSE}
+FigCap="Comparison of different amounts of smoothing a time
+series."
+```

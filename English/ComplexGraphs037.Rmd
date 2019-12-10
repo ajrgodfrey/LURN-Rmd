@@ -1,0 +1,7 @@
+[Link to SVG version](../SVGs/ComplexGraphsXYZContour-1.html)
+
+Note the `contour()`  function needed to know the unique values
+of the *x* and *y* variables we created, but that the *z* matrix
+needed these values repeated enough times so that the function was
+evaluated over the entire set of combinations of *x* and *y*. 
+

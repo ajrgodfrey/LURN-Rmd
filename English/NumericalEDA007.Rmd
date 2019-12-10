@@ -1,0 +1,14 @@
+﻿The `summary()` command finds the common numeric summary
+statistics for the continuous-valued variables and does a particularly
+useless job on the variables for month and day. Well it’s not really R’s fault. The month didn’t need to be stored numerically, but in any
+case we got what we asked for\! It’s not R ’s fault we asked to be told
+what the minimum day number was\!
+
+Notice that the `summary()` command extracted the minimum,
+maximum, median and mean for the variables in the `data.frame`. These are all available using corresponding `min()` ,
+`max()` , `median()` , and `mean()` commands
+separately but they work in different ways on data frames. For example
+we might have thought to use the `mean()` command on a
+`data.frame` , but it is better practice to use the more
+specific `colMeans()` command instead. 
+

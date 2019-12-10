@@ -1,0 +1,6 @@
+
+```{r tbl_dfAirQuality} 
+airquality2 = tbl_df(airquality) 
+```  
+ 
+

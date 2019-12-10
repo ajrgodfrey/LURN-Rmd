@@ -1,0 +1,8 @@
+In this most basic form, the `read.csv()` command will look for
+the file in the current working directory, and import it into R and
+store it as a `data.frame` called `Chickens`. The
+default settings of the `read.csv()` command are to have a
+`header` row in the file and to have no `row.names` attribute associated with the data in the file. If your data file
+already had a column for the names of the chickens as the first column,
+you would issue the command 
+

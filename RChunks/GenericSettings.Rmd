@@ -1,0 +1,16 @@
+
+```{r setup, include=FALSE, purl=FALSE} 
+rm(list = ls())
+if (!file.exists("Data")) dir.create("Data")
+if (!file.exists("figures")) dir.create("figures")
+if (!file.exists("tables")) dir.create("tables")
+if (!file.exists("Other")) dir.create("Other")
+set.seed(222664)
+options(width = 60,  digits = 4, continue="   ")
+library(knitr)
+opts_chunk$set(fig.width=7, fig.height=5, comment="")
+Blind = file.exists("Blind.bat")
+FigCap="To FIX"
+``` 
+ 
+

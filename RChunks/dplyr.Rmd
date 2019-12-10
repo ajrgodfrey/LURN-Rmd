@@ -1,0 +1,6 @@
+
+```{r loadDPlyR} 
+library(dplyr) 
+```  
+ 
+

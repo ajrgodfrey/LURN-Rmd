@@ -1,0 +1,6 @@
+
+```{r ImportCSVSubFolder2, eval=FALSE} 
+Chickens = read.csv("./MyData/chickens.csv") 
+```  
+ 
+

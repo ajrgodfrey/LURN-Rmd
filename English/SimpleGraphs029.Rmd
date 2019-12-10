@@ -1,0 +1,22 @@
+
+## Scatter plot matrices {#ScatterPlotMatrices}
+
+A scatter plot matrix is just a matrix of scatter plots where each
+variable is plotted against all other variables. This graphic is
+therefore very useful for a preliminary look at multivariate data. In R
+, we obtain this graphic using the `pairs()` command as
+illustrated in Figure \@ref(fig:AirQuality-ScatterPlotMatrix).
+
+Only four of the variables within the `air quality` data have
+been used in this example because the variables for the month and day
+take discrete values and therefore do not suit scatter plots — take a
+look for yourself if you must but it’s probably better to think about
+why this is the case before you look at the graphs. To select the four
+variables of interest, I have created a `data.frame` with the
+variables I want included; this `data.frame()` command is then
+nested within the `pairs()` command.
+
+
+```{r include=FALSE}
+FigCap = "A scatter plot matrix for four variables found in the the Air Quality data."
+```

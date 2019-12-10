@@ -1,0 +1,5 @@
+```{r StateRegion-PieChart, fig.width=7, fig.height=7, fig.cap=FigCap} 
+pie(summary(state.region)) 
+```  
+ 
+

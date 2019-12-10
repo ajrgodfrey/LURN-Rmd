@@ -1,0 +1,9 @@
+
+```{r FindHottestMonthsPiping} 
+airquality2 %>% 
+group_by(Month) %>% 
+summarise(AveTemp = mean(Temp, na.rm = TRUE))  %>% 
+arrange(desc(AveTemp)) 
+```  
+ 
+

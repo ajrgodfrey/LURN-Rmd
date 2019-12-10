@@ -1,0 +1,7 @@
+
+```{r CheckData} 
+class(Names) 
+str(Names) 
+```  
+ 
+

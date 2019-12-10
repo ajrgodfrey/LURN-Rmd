@@ -1,0 +1,4 @@
+Rather than continuously investigate the summaries of the various
+models, we can employ the `anova()` command to compare the
+models. 
+

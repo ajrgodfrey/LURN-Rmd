@@ -1,0 +1,6 @@
+
+```{r eval=FALSE} 
+library(NewPackage) 
+```  
+ 
+

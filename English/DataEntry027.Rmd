@@ -1,0 +1,7 @@
+﻿extracts the second and third names. The set of names entered is a
+`vector` and has only one subscript to monitor. We will see
+how to subscript elements within a `matrix` or `data.frame` later.
+
+It’s also often necessary to understand how R has stored an object. The
+`class()` command is useful, and so is the `str()` command. For example 
+

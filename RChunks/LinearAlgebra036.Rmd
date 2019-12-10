@@ -1,0 +1,6 @@
+
+```{r EigenVectors} 
+eigen(H4)$vectors 
+```  
+ 
+

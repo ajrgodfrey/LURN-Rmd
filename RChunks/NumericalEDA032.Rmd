@@ -1,0 +1,6 @@
+
+```{r Correlations} 
+cor(data.frame(Ozone, Solar.R, Wind, Temp)) 
+```  
+ 
+

@@ -1,0 +1,8 @@
+
+```{r Ordering4} 
+RunOrder 
+Data=data.frame(x,RunOrder) 
+Data[order(RunOrder),] 
+```  
+ 
+

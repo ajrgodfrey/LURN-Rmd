@@ -1,0 +1,40 @@
+﻿(The `MASS` package is already installed by default.)
+
+Often we will be using a particular data set because it is good for
+demonstrating functions within a particular package. If we are loading
+the package using the `library()` command, to get access to the
+functions, we will have also made the data available. This is why the
+data from the `datasets` package is ready for use; this package is
+loaded by default whenever R is started.
+
+## Data cleanliness
+
+Rather ironically, the suggestion for including this section came from
+my mother. All too frequently, data are entered by people who will not
+actually need to use the data themselves. Sometimes data are entered by
+different people and then compiled into a single dataset and the various
+codes that some sources of data may use are not necessarily in common
+with all other users. Take for example, the many ways we might enter
+data for the gender of individuals answering a survey. You might easily
+realise that an “`M` " means male, but R needs consistency.
+
+It is extremely important that we have knowledge of the format of the
+data we import. Use of the `str()` command is a good start, and
+use of the `head()` command might also be useful.
+
+Here are some pointers to look out for:  - Have you mixed the case of the text in your data? Remember that R is    case sensitive and that “R" is not the same as “r" in R.  - Has R tried to be too smart and interpreted plain text information    as if you wanted a `factor` instead? This occurs    frequently with date values which are notorious for the variety of    formats people choose. If you have a factor when you wanted just    plain text, investigate the `as.character()` command which    changes the format to being character valued data.  - Have a multitude of codes been used for variables like gender? If    so, R will decide that the variable is a `factor` and list    the different values the variable can take. The levels of the factor    can be re-assigned using the `levels()` command. See how    this is done on and note that two elements of the assignment can be    the same if the current codes mean the same thing.  - Have extra spaces crept into the codes for levels of factors    somehow? This happens when an extra space occurs between words or is    added on the end of a text string. Often, this problem is difficult    to spot visually as we are talking about white space — R will find    it though\! Use the `levels()` command to fix this if the    problem is small, but consider using a find/replace tool in a    spreadsheet application as an alternative.  - Have numbers come into R as text for some reason? This happens for a    number of reasons. A blank space being entered in the cell instead    of a code for a missing value for example. R would see this as a    character string “ ", not an empty cell. Another reason is that the    missing value code is textual and not recognized by R. There are    ways around this problem using either find/replace techniques in    your spreadsheet application to delete the missing value codes, or    by changing the way the `read.table()` or    `read.csv()` command reads your data file. See the help for    these commands if this is the case.
+
+## Other packages
+
+It is all too common to need to import data from a spreadsheet
+application where the data is not conveniently placed in the upper-left
+corner of the first sheet. There are a number of such spreadsheet
+applications, but the most commonly used one is Microsoft Excel.
+
+Data in spreadsheets is seldom ready for importing in the exact form we
+want it. If you need to extract a set of data that is in a named sheet
+or always appears in the same numbered sheet of a Microsoft Excel file,
+then you might investigate the `openxlsx` package. See
+Chapter \@ref(Additional) and the help page for the
+`read.xlsx()` command. 
+

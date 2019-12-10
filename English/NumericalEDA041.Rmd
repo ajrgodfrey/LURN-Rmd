@@ -1,0 +1,5 @@
+The `summarise()` and `group\_by()` commands can be used
+instead of the `tapply()` command introduced earlier in this
+chapter. To get the overall average wind speed from the
+`airquality` data, we could use: 
+

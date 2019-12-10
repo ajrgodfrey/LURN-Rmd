@@ -1,0 +1,8 @@
+
+```{r MySine2} 
+MySine2 <- function(x){ sin(x) 
+print(x)} 
+MySine2(pi/2) 
+```  
+ 
+

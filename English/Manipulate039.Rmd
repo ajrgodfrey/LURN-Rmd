@@ -1,0 +1,8 @@
+﻿creates the new variable as a stand alone object. It hasn’t been stored
+as an object so is only temporarily available.
+
+Finally, the `dplyr` package also gives users two simple ways
+to extract a random sample from a `data.frame`. The commands
+`sample\_n()` and `sample\_frac()` extract a sample of a predetermined size and a specified fraction
+respectively. For example: 
+

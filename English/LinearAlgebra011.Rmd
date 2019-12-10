@@ -1,0 +1,4 @@
+A Hilbert matrix can be created using a formula. The `row()` and
+`col()` commands use the size of the argument to create objects
+of the same size. 
+

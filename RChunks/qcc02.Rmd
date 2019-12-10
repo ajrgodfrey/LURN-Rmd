@@ -1,0 +1,16 @@
+MyChart=qcc(Yarn, type="S", add.stats=TRUE)
+```
+
+```{r }
+summary(MyChart)
+```
+
+```{r RChart}
+MyChart=qcc(Yarn, type="R", add.stats=TRUE)
+```
+
+```{r }
+summary(MyChart)
+``` 
+ 
+

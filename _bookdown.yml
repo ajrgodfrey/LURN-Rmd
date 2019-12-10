@@ -1,0 +1,7 @@
+book_filename: "LURN"
+chapter_name: "Chapter "
+repo: https://github.com/ajrgodfrey/LURN-Rmd
+output_dir: LURN
+clean: [packages.bib, bookdown.bbl]
+new_session: yes
+rmd_files: ["index.Rmd", "Intro.Rmd", "BlindUse.Rmd", "DataEntry.Rmd", "ImportData.Rmd", "Manipulate.Rmd", "ExportData.Rmd", "SimpleGraphs.Rmd", "NumericalEDA.Rmd", "StoreResults.Rmd", "GoodIdeas.Rmd", "BasicInference.Rmd", "Regression.Rmd", "ANOVA.Rmd", "TimeSeries.Rmd", "multivariate.Rmd", "ComplexGraphs.Rmd", "additional.Rmd", "vi.Rmd", "maps.Rmd", "QualityControl.Rmd", "scientific.Rmd", "calculus.Rmd", "LinearAlgebra.Rmd", "OperRes.Rmd", "ZZBib.Rmd"]

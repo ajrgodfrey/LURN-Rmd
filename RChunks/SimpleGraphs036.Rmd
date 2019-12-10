@@ -1,0 +1,5 @@
+```{r SummaryState} 
+summary(state.region) 
+```  
+ 
+

@@ -1,0 +1,4 @@
+The `plot=FALSE` argument stops the graph being plotted. We can get
+the graph anytime by issuing the `plot()` command but we are
+only interested in seeing what R has stored in the `MyHist` object at the moment. 
+

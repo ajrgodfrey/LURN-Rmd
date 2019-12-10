@@ -1,0 +1,10 @@
+﻿Note that I’ve told R which columns of the `air quality` `data.frame` to work with using the appropriate subscripting
+code. I’ve also needed to tell R to ignore the missing data for the two
+variables `Ozone` and `Solar.R` using the `na.rm=TRUE` argument. The output for the `summary()` command
+did tell us how many values for each variable were missing. Recall that
+missing values are represented by a “`NA` ".
+
+The `min()` and `max()` commands all work on the data by
+assuming we want the statistic for the whole list of numbers over all
+columns. For example 
+

@@ -1,0 +1,6 @@
+
+```{r GrabRows3} 
+nrow(subset(airquality, Temp==69)) 
+```  
+ 
+

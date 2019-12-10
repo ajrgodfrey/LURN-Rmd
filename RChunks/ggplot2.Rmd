@@ -1,0 +1,5 @@
+```{r loadGGPlot2} 
+library(ggplot2) 
+```  
+ 
+

@@ -1,0 +1,6 @@
+
+```{r EnterLogical} 
+Human = c(TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE) 
+```  
+ 
+

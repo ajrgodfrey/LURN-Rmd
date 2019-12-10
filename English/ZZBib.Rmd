@@ -1,0 +1,29 @@
+# References
+
+```{R getPkgRefs, echo=FALSE, include=FALSE}
+library(BrailleR)
+Require(lattice)
+Require(ggplot2)
+Require(TeachingDemos)
+Require(gridGraphics)
+Require(gridSVG)
+Require(nortest)
+Require(moments)
+Require(xtable)
+Require(knitr)
+require(MASS)
+Require(rmarkdown)
+require(bookdown)
+require(tidyverse)
+require(lubridate)
+require(dplyr)
+require(broom)
+require(magrittr)
+require(tseries)
+require(forecast)
+write_bib(file="Rpkgs.bib", prefix="Rpkg-")
+```
+
+```{r makeBatch, include=FALSE}
+BrailleR::MakeBatch("RunLater.R")
+```

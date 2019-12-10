@@ -1,0 +1,30 @@
+﻿[Link to SVG version](../SVGs/`r SVGName`.html)  
+
+Some people find the standard dotplot that R creates a little
+artificial. The spacing between points horizontally and vertically is
+captured by the human eye, but this graph is a single dimensional
+representation. Adding jitter to the data allows points where there are
+ties to be represented by a pair of points on the graph rather than two
+perfectly overlaid points which look like a single point. The
+`jitter()` command can be embedded within the command for
+creation of a dotplot, but is not required for our example data as there
+are no ties. If there were a large number of ties, we would have used
+the command `dotchart(jitter(Wind))`.
+
+### Simple line plots {#LinePlots}
+
+Occasionally it’s useful to see how a measurement changes over the time
+the data were collected. R does this very simply using the
+`plot()` command as shown in
+Figure \@ref(fig:AirQuality-LinePlotTemp) which is for the maximum daily
+air temperatures at LaGuardia airport from 1 May to 30 September 1973.
+We can see periods of time where the maximum temperatures were fairly
+consistent and periods where it was fairly volatile. The middle of the
+graph is for the month of July which is the height of summer in New York
+and as a consequence we expect to see few points nearer the lower part
+of the graph during this period.
+
+
+```{r include=FALSE}
+FigCap="A plot showing the temperature measurements in the order they were collected."
+```

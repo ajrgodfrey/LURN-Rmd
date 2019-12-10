@@ -1,0 +1,8 @@
+
+```{r TApply2} 
+Day15 = Day > 15
+tapply(Wind, list(Month, Day15), mean) 
+aggregate(Wind ~ Month + Day15, data=airquality, mean) 
+```  
+ 
+

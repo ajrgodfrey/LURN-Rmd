@@ -1,0 +1,6 @@
+
+```{r TXTOut, eval=FALSE} 
+txtOut() 
+```  
+ 
+

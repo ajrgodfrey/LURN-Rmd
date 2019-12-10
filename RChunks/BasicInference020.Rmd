@@ -1,0 +1,6 @@
+
+```{r TTest4} 
+t.test(extra~group, paired=TRUE) 
+```  
+ 
+

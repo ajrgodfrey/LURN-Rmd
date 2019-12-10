@@ -1,0 +1,8 @@
+
+```{r UseDF2} 
+MyFirstDF[4,1] 
+MyFirstDF[4,"Names"] 
+MyFirstDF$Names[4] 
+```  
+ 
+

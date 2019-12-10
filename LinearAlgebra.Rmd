@@ -1,0 +1,277 @@
+# LURN… To Use R for Linear Algebra{#LinearAlgebra} 
+
+
+```{r setup, include=FALSE, purl=FALSE} 
+rm(list = ls())
+if (!file.exists("Data")) dir.create("Data")
+if (!file.exists("figures")) dir.create("figures")
+if (!file.exists("tables")) dir.create("tables")
+if (!file.exists("Other")) dir.create("Other")
+set.seed(222664)
+options(width = 60,  digits = 4, continue="   ")
+library(knitr)
+opts_chunk$set(fig.width=7, fig.height=5, comment="")
+Blind = file.exists("Blind.bat")
+FigCap="To FIX"
+``` 
+ 
+
+
+```{r ChSetup, include = FALSE, purl=FALSE}
+opts_chunk$set(fig.path='figures/Algebra', out.width="0.7\\textwidth") 
+```  
+ 
+
+This chapter explains how some tasks commonly taught in introductory
+algebra courses can be undertaken using R. The functionality is built
+into R because so many tasks in statistical analyses require
+manipulation of vectors and matrices, although much of this work is
+hidden behind other commands and functions.
+
+## Basic notes on storage of vectors and matrices
+
+We will concern ourselves with only numeric valued vectors and matrices
+in this chapter. Other types of data can be stored in vectors and
+matrices (as well as other data structures) but they have little
+relevance for linear algebra at this time.
+
+In linear algebra, a vector is a one dimensional set of numbers. It is
+usually referred to as a row vector or a column vector to indicate its
+orientation. This orientation does matter for the ability to perform
+certain tasks when working with two or more vectors and matrices.
+
+A matrix is a two-dimensional array of numbers, having a number of rows
+and columns. Many mathematical software applications do not explicitly
+distinguish a vector from a matrix because they store a row vector as if
+it were a matrix having just one row. Similarly, a column vector is
+stored as a matrix having just one column.
+
+R does distinguish betweena vector and a matrix, but it does not state
+whether a vector is a row or column vector. This does have its
+advantages, and probably some disadvantages as well. If for any reason
+you need to force the orientation of a vector, then create it as a
+matrix with one of its dimensions set equal to one. For example, we
+create a simple vector: 
+
+
+```{r CreateVector} 
+x=1:4 
+x 
+class(x) 
+```  
+ 
+
+We can convert this to a column matrix using 
+
+
+```{r CreateMatrix} 
+X=matrix(x, ncol=1) 
+class(X) 
+X 
+```  
+ 
+
+Notice that I’ve used a capital letter for the matrix version of the
+same set of numbers here which is possible because R is case sensitive.
+The `ncol` argument can be replaced by using the
+`nrow` argument if a row vector is required.
+
+## Creating some simple matrix structures
+
+The identity matrix is a diagonal matrix so we use the `diag()` command to create it. For example 
+
+
+```{r CreateIdentity} 
+I3=diag(3) 
+I3 
+```  
+ 
+
+We often need to find the transpose of a matrix. The `t()` command does this. 
+
+
+```{r Transpose} 
+M=matrix(1:6,nrow=2) 
+M 
+t(M) 
+```  
+ 
+
+A Hilbert matrix can be created using a formula. The `row()` and
+`col()` commands use the size of the argument to create objects
+of the same size. 
+
+
+```{r CreateHilbert} 
+row(I3) 
+Hilb3=row(I3)+col(I3)-1 
+```  
+ 
+
+Notice that the Hilbert matrix is created by adding two matrices
+together and then a constant is subtracted from all elements of the
+result.
+
+## Matrix and vector calculations
+
+We saw a simple addition of elements of two matrices of the same size as
+well as a subtraction in the previous section. R uses the standard
+arithmetic operators on pairs of matrices (or vectors) on an
+element-by-element basis.
+
+Addition of a constant to a vector or matrix is effected on all elements 
+
+
+```{r AddConstant} 
+x+2 
+2+x 
+```  
+ 
+
+Similarly, we can multiply a vector or matrix by a scalar using: 
+
+
+```{r ScalarMult} 
+5*x 
+x*5 
+5*X 
+```  
+ 
+
+which retains the size of the vector or matrix. Also note that
+pre-multiplying by a scalar is equivalent to post-multiplying by a
+scalar, as should have been expected. This is of course different to
+matrix multiplication.
+
+Matrix operations use different symbols from simple arithmetic operators
+to distinguish the different results that might be desired. For example, 
+
+
+```{r MatrixElementMult} 
+A=matrix(1:4, nrow=2) 
+B=matrix(7:10, nrow=2) 
+A*B 
+```  
+ 
+
+creates a matrix with elements based on simple multiplication of the
+paired elements, not those based on proper matrix multiplication.
+
+If we want to multiply two matrices, the order is important. 
+
+
+```{r MatrixMult} 
+A%*%B 
+B%*%A 
+```  
+ 
+
+Multiplying a matrix by a vector is easily achieved, and R will orient
+the vector to conform to the rules of matrix multiplication as required. 
+
+
+```{r MultiplyMatrices} 
+y=c(3,4) 
+A%*%y 
+y%*%A 
+```  
+ 
+
+## Inverting a matrix
+
+The inverse of a matrix is used in many statistical procedures. The
+`solve()` command inverts a square matrix. 
+
+
+```{r GetInverse} 
+A 
+solve(A) 
+```  
+ 
+
+For matrices that are not square, a generalised inverse can be found
+using the `ginv()` command found in the `MASS` package
+that is part of the standard R distribution. 
+
+
+```{r GetGInverse} 
+M 
+require(MASS) 
+ginv(M) 
+```  
+ 
+
+Of course, the product of the matrix and its generalised inverse should
+be an identity matrix. 
+
+
+```{r ShowIdentity} 
+M%*%ginv(M) 
+```  
+ 
+
+Like many other applications, R does not recognize the number zero very
+well. This is due to the way decimal numbers are stored.
+
+## Solving a set of linear equations
+
+If we want to solve the set of equations, represented in matrix form as
+$Ax=b$, we use the `solve()` command 
+
+
+```{r SolveLinearSet} 
+A 
+b=c(5,7) 
+solve(A,b) 
+```  
+ 
+
+## Determinants and traces
+
+The `det()` command is used for finding the determinant of a
+matrix. 
+
+
+```{r Determinant} 
+A 
+det(A) 
+```  
+ 
+
+The trace of a matrix is not so easily found. There is a command that is
+called `trace()` but this is not an algebraic function. If you
+want the trace of the matrix, you will need to sum the eigenvalues of
+the matrix.
+
+## Eigenvalues and eigenvectors
+
+Calculation of eigenvalues and their associated eigenvalues is fairly
+simple, but extracting the elements required might pose a little
+difficulty. Let’s create a 4$\times$4 Hilbert matrix and find its
+eigenvalues: 
+
+
+```{r FullEigen} 
+H4=matrix(-1,nrow=4, ncol=4) 
+H4=H4+row(H4)+col(H4) 
+H4 
+eigen(H4) 
+```  
+ 
+
+If we only wanted the eigenvalues, we could add the argument
+`only.values=TRUE` ; if the eigenvectors were of interest,
+then we would need to extract the second element of the above result: 
+
+
+```{r EigenVectors} 
+eigen(H4)$vectors 
+```  
+ 
+
+```{r cleanup, include=FALSE, purl=FALSE}
+rm(list = ls())
+``` 
+ 
+
+

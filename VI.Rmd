@@ -1,0 +1,383 @@
+# LURN… The basics of the BrailleR add-on package{#BrailleR} 
+
+
+```{r setup, include=FALSE, purl=FALSE} 
+rm(list = ls())
+if (!file.exists("Data")) dir.create("Data")
+if (!file.exists("figures")) dir.create("figures")
+if (!file.exists("tables")) dir.create("tables")
+if (!file.exists("Other")) dir.create("Other")
+set.seed(222664)
+options(width = 60,  digits = 4, continue="   ")
+library(knitr)
+opts_chunk$set(fig.width=7, fig.height=5, comment="")
+Blind = file.exists("Blind.bat")
+FigCap="To FIX"
+``` 
+ 
+
+
+```{r ChSetup, include=FALSE, purl=FALSE}
+opts_chunk$set(fig.path='figures/VI', out.width="0.7\\textwidth") 
+```  
+ 
+
+﻿This chapter provides a brief explanation of how the
+`BrailleR` package [@Rpkg-BrailleR] can be used by blind people to get
+many tasks done quickly and effectively. In general, the package does
+three things:
+
+1.  creates a copy of the R console/terminal in a text file including    all standard output.
+
+2.  creates text descriptions of some graphs. These tools should help    the blind user create graphs (with confidence) for the sighted world    we must work in.
+
+3.  provides convenience functions for novice users who do not know    enough R commands to survive. Sighted people have the benefit of    graphical user interfaces (GUI) to help them, but none of them are    accessible by screen reading software.
+
+Initially, the package was built on top of functionality I wrote to
+support my own work practices, but additions to meet the needs of other
+blind R users have been made on request.
+
+A much more comprehensive user’s guide to the `BrailleR` package can be found at the [BrailleR in Action e-book homepage.](https://R-Resources.massey.ac.nz)
+
+You will need to install the `BrailleR` package before
+continuing on with the examples in this chapter. It is available from
+CRAN. Use the examples in Chapter \@ref(Additional) to help install
+this package. Then use the `library()` command to make sure the
+package is ready for action. 
+
+
+```{r LoadPackage} 
+library(BrailleR) 
+```  
+ 
+
+﻿This chapter was created using version `r packageVersion("BrailleR")`  of the `BrailleR` package. This version of the package has a number of other packages that
+it depends on for functionality. When you make the `BrailleR` package available, you may see a few introduction messages that tell you
+about the other packages being loaded. You will also be told about some
+default settings for the package that can be altered later to suit your
+needs.
+
+If you want to know more about the `BrailleR` package and its
+creation, you might like to look over its homepage by issuing the
+`BrailleRHome()` command which will take you to the [BrailleR Project homepage.](https://R-Resources.massey.ac.nz/BrailleR)
+
+Once you have read through this chapter, you can check out the rest of
+the `BrailleR` package’s features as explained in another
+e-book. The title of that e-book is “BrailleR in Action"; you can go to
+its homepage from R directly by issuing the `BrailleRInAction()` command which will take you to the front page of the book at
+https://R-Resources.massey.ac.nz/BrailleRInAction
+
+## Creating a copy of the R console window {#CreateCopyConsole}
+
+In Chapter \@ref(BlindUse) I mentioned the need to save the content of
+the console window to a text file to be able to copy and paste its
+content to a report or document. One major feature of the `BrailleR` package is that this functionality can be done easily and efficiently.
+
+There are three types of content printed in the console window.
+
+1.  The commands we type,
+
+2.  The output valid commands generate, and
+
+3.  Any error or warning messages that arise from our commands.
+
+The `sink()` command does not currently record the commands or
+the errors and warning messages. It is therefore a valuable tool for
+those R users that are confident about the validity of their scripts.
+
+Similarly, the `history()`  command shows a list of all issued
+commands, even those that contain errors. N.B. The `BrailleR` package has its own `history()` command that opens the contents
+of the command history in a text editor so that it can be read using
+screen-reading software.
+
+Saving the commands typed into an R session can be achieved using the
+`savehistory()` command, but again, this will include the
+commands that generated errors. For example 
+
+
+```{r SaveHistory, eval=FALSE} 
+savehistory("WhatIDidToday.txt") 
+```  
+ 
+
+will save all the issued commands into a text file called `
+WhatIDidToday.txt` in the current working directory.
+
+If I just want to have everything I do during a session recorded for
+posterity, I want all contents of the console window to be saved. A
+plain text file is sufficient but it is possible to use add-on packages
+to create other file formats.
+
+I have included a convenience function in the `BrailleR` package that starts a text file with the date and time in its filename.
+It gets saved in the current working directory. To get this file
+started, just type 
+
+
+```{r TXTOut, eval=FALSE} 
+txtOut() 
+```  
+ 
+
+﻿In fact this command starts several files, one for the complete console
+and one for the issued commands. The command actually runs the
+`txtStart()` command but specifies particular options for the
+user’s convenience. If you are happy to use the default filename then you
+just need to hit `<enter>`, but if you want to specify the filename, you
+type the name, and then hit `<Enter>` twice (once for your file and once
+to get out of the filename requesting prompt).
+
+See the help page for the `txtOut()` command as it includes the
+history of the command and its relatives. The other related commands add
+comments to the text file while `txtStop()` stops the processing
+entirely. Also note that the help page mentions how to get the packages
+needed for other file formats.
+
+You can open the text file that is being created and modified as you
+work in any browser. Once you have the file open and have done some
+work, you must refresh your browser to see the latest changes. Keep the
+browser open as you work and remember to refresh often to keep on top of
+what is happening with complete access via your screen reader.
+
+## Text interpretation of graphs {#VIExplained}
+
+Statistics is an inherently visual discipline. Many statistical analyses
+lead to a graphic representation of data that is easy for the sighted
+world to interpret. Through use of R we can create functions that can
+interpret the graphs using text descriptions. We’ll start with a
+histogram.
+
+In most circumstances, the user will create a histogram using the
+`hist()` command. This command takes data and creates a number
+of values needed to construct the histogram. We can see what has been
+created by storing these values in an object. For example: 
+
+```{r CreateHist, warnings=FALSE} 
+MyHist = hist(airquality$Wind, xlab="Average wind speed (mph)", main="", plot=FALSE) 
+```  
+ 
+
+The `plot=FALSE` argument stops the graph being plotted. We can get
+the graph anytime by issuing the `plot()` command but we are
+only interested in seeing what R has stored in the `MyHist` object at the moment. 
+
+
+```{r ShowPrintHist} 
+MyHist 
+str(MyHist) 
+class(MyHist) 
+```  
+ 
+
+﻿The full print out has everything we need but is not in a friendly
+format. The `str()` command gives us a condensed version of the
+data being stored but isn’t sufficient, and the `class()` command just tells us that this information is stored in an object of
+type `histogram`. The class of the object is the most
+important as it is what tells R how to work on the object when we use
+the `plot()` command on the `MyHist` object. The `plot()` command is actually a family of commands, one of which
+is purposely designed for histograms. The `plot.histogram()` command is actually what constructs the graph when the user calls the
+`plot()` command on an object of type `histogram`.
+This family of commands is known as a "method".
+
+The `BrailleR` package includes a method for creating text
+interpretations in a similar way. The `VI()` command is actually
+a family of commands that includes the `VI.histogram()` command.
+When we issue the `VI()` command on the `MyHist` object, the `VI.histogram()` function does the work. Let’s see what we get: 
+
+```{r Hist, fig.cap=FigCap}
+VI(hist(airquality$Wind, xlab="Average wind speed (mph)", main="")) 
+```
+
+```{r HistSVG, eval=Blind, echo=FALSE, include=FALSE, messages=FALSE, warnings=FALSE, results="hide"} 
+MakeAccessibleSVG(hist(airquality$Wind, xlab="Average wind speed (mph)", main=""), "figures/VIHistAirQualityWind") 
+``` 
+[Link to SVG version](../SVGs/VIHistAirQualityWind.html)  
+ 
+
+Other functions exist for boxplots and dotplots. Try: 
+
+
+```{r VIBoxplot} 
+VI(boxplot(airquality$Wind, xlab="Average wind speed (mph)")) 
+```  
+ 
+
+and 
+
+```{r VIDotplot} 
+VI(dotplot(airquality$Wind, xlab="Average wind speed (mph)")) 
+``` 
+ 
+
+﻿The `dotplot()` command is not part of base R which uses the
+`stripchart()` command instead. The `hist()` and `boxplot()`  commands used here are actually commands from the
+`BrailleR` package that use the standard commands indirectly.
+At this point in time, I haven’t worked out how to get the
+`stripchart()` command to work as a `BrailleR` command so I needed to use a different name for my version. The
+`BrailleR` versions of these three commands store the
+additional information we need to get the text interpretation that is
+not possible from the standard version of the commands.
+
+## Basic descriptions of variables
+
+The `UniDesc()` function is designed to quickly generate a text
+summary of a single variable. It also saves several graphs. It can also
+save the text in a file and use the `VI()` command from the
+`BrailleR` package to add text descriptions to the output
+file.
+
+One obvious issue is that saving lots of files could become problematic.
+Default filenames are used and all files can be put into a folder of the
+user’s choosing.
+
+An example will help. Try 
+
+
+```{r UniDesc, eval=FALSE} 
+data(airquality) 
+Ozone=airquality$Ozone 
+UniDesc(Ozone, Folder="AirQuality") 
+```  
+ 
+
+﻿Take a look in the `AirQuality` folder that has been created in your working
+directory. It has a number of files that all start with “Ozone" --- the
+name of the variable being analysed. You will also have three files
+stored in the current working directory which have the filename `Ozone-UniDesc.*` where
+the star is for the extension which is one of `html`, `R`, and `Rmd`.
+
+The most useful one at first is the `Ozone-UniDesc.html` file. Open this file in a browser to
+see what analyses have been included. This file is specifically
+formatted for use with screen readers. I hope you find it valuable. If
+you are reading this document on the web, then the link
+[Ozone-UniDesc.html](Ozone-UniDesc.html) will open it in your browser. N.B. This link will not work if you are using the \file{pdf} version of LURN.
+
+The commands used to generate parts of this HTML document are given in
+the R script file; the third file is called an R markdown document. This
+is the file that gets converted into the other two files. It might prove
+useful to learn how to write this kind of file for yourself one day.
+
+In the subfolder you will find that graphs have been saved in a variety
+of formats. They each have their uses and hopefully the filetype you
+need is there. Special attention is made for those users of LaTeX who
+need specific formats for graphics. Some more advanced information is
+presented in LaTeX formatted tables and put into files with the `.tex` extension. 
+
+Whenever the `VI()` function is employed on an object that does
+not yet have an explicit function tied to it, then you will be told that
+this is the case. This package is a work in progress after all. Please
+feel free to send an email if you’d like any extra functionality.
+
+## Altering R output to make it easier to read
+
+Some R output is arranged in nice tables that are easy for the sighted
+user to read, but are difficult to understand if using synthesised
+speech to read the information back to you. The `VI()` command
+is used again here but is now employed on a `data.frame` object. We’ll compare it with the `summary()` command used frequently. 
+
+
+```{r VIDataFrame} 
+summary(airquality) 
+VI(airquality) 
+```  
+ 
+
+﻿The output generated by the `summary()` command is difficult to
+follow as variables are represented in columns while rows that are read
+aloud by a screen reader are for the sample statistics.
+
+The `VI()` method has given us a summary of the variables one by
+one. This should prove easier to navigate and interpret as either a
+braille or screen reader user.
+
+## Reading a scatter plot
+
+One challenge facing blind people is the inability to glance at a graph
+and understand what is intended just as sighted people can. The most
+difficult graphs to deal with are multidimensional representations of
+data. Two dimensional scatter plots are the first example of such
+graphs.
+
+When a sighted person looks at a scatter plot, they are looking for a
+number of things. A relationship between the variables is the most
+common thing to look for, but there is also a need to identify points
+that are unusual in the context of the data presented.
+
+One possible way to describe how the data points are summarised at a
+glance is that the graphing window is broken up into areas and a rough
+guess at the density of points within each region is evaluated. If this
+evaluation of density can be guessed, it can be counted more exactly by
+a purposely written function. The `WhereXY()` function does this
+counting for us. It assumes equal-sized rectangular regions in the graph
+window. We can choose how many regions but the illustrations here all
+use a $5\times5$ grid.
+
+Let’s work with a number of examples, all based on a set of
+predetermined *x*-values and various possible *y*-values. 
+
+
+```{r CreateVars} 
+x=(0:100)/100 
+y1=5*x+rnorm(101) 
+y2=(2*x-1)^2+rnorm(101)/6 
+y3=11*x+rnorm(101) 
+y4=y3; y4[100]=0 
+```  
+ 
+
+What we might guess from the above is that a graph of $(x,y_1)$ pairs
+would show quite a lot of noise; $(x,y_2)$ pairs are a parabola with
+some noise; $(x,y_3)$ pairs are for a straight line with some noise;
+and, $(x,y_4)$ pairs are the same as the previous straight line, but
+one point is some distance from the line.
+
+The `WhereXY()` command for each plot is now given. 
+
+
+```{r WhereXY} 
+WhereXY(x,y2, grid=c(5,5)) 
+WhereXY(x,y2, grid=c(5,5)) 
+WhereXY(x,y3, grid=c(5,5)) 
+WhereXY(x,y4, grid=c(5,5)) 
+```  
+ 
+
+We might also alter the number of cells in the grid to see how sensitive
+we want to make our investigation. Personal preferences will determine
+which combination of rows and columns works best. 
+
+## Creation of graphs with an accessible interactive tool for exploration
+
+New functions have been added to the `BrailleR` package in order to make
+accessible tools for interactive exploration of graphs. The standard
+commands for creation of histograms, boxplots, scatter plots and time
+series plots do not return the extra information needed to get the
+exploration tool to work. Each of the following commands creates the
+same graph as would be created using the commands in previous chapters.
+Refer to the examples found in the help pages for each of these commands
+to see the standard base R commands that these `BrailleR` functions replicate.
+
+N.B. You must store the graph in a named object for later use. 
+
+```{r AccessGraphs1}
+attach(airquality)
+MyScatter = ScatterPlot(Wind, Ozone)
+MyFLP = FittedLinePlot(Temp, Ozone, line.col=4)
+MyHist = hist(Ozone)
+MyBoxplot = boxplot(Wind)
+detach(airquality)
+``` 
+ 
+
+## What else?
+
+Future developments in the `BrailleR` package will be made to meet demand.
+If you do want some additional functionality that you think is likely to
+be wanted by others then please do add to the wish list. Current ideas
+on the wish list include:  - Easier to interpret multiple regression output.  - Easier to interpret principal component analysis output.  - More graph types being described using the `VI()` command.  - Easier to interpret factor analysis output. 
+
+```{r cleanup, include=FALSE, purl=FALSE}
+rm(list = ls())
+``` 
+ 
+
+

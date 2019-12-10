@@ -1,0 +1,4 @@
+You could of course alter the analysis by adding arguments to these
+commands to suit your needs. Experiment a little before detaching the
+`sleep` data using the `detach()` command: 
+

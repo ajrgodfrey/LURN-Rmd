@@ -1,0 +1,6 @@
+## Extracting data using information on one variable
+
+To illustrate the extraction of a set of observations from a
+`data.frame`, we make use of one of the internal datasets
+provided with the base installation of R. We retrieve the `airquality` data using: 
+

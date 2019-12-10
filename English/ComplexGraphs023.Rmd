@@ -1,0 +1,12 @@
+[Link to SVG version](../SVGs/ComplexGraphsAddPolyCurve-1.html)
+
+Note that the `poly()` function needs to use the `raw=TRUE` argument to get the correct coefficients for the curve to be added to this graph.
+
+## Adding text to an existing graph
+
+## Adding a legend for different information within a graph
+
+```{r include=FALSE}
+FigCap="Deaths from lung diseases in the United Kingdom (with legend
+added)"
+``` 

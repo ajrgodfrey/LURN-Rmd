@@ -1,0 +1,7 @@
+
+```{r VIDataFrame} 
+summary(airquality) 
+VI(airquality) 
+```  
+ 
+

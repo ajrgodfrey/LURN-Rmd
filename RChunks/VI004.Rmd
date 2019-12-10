@@ -1,0 +1,6 @@
+
+```{r LoadPackage} 
+library(BrailleR) 
+```  
+ 
+

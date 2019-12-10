@@ -1,0 +1,8 @@
+
+```{r MultiplyMatrices} 
+y=c(3,4) 
+A%*%y 
+y%*%A 
+```  
+ 
+

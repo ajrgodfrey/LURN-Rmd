@@ -1,0 +1,5 @@
+We use the `order()` command to work with data that are
+non-numeric vectors, as well as data in `matrix` or
+`data.frame` format. For example, we first sort the names of
+me and my three children initially given in descending order of age. 
+

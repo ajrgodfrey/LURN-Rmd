@@ -1,0 +1,5 @@
+```{r cleanup, include=FALSE, purl=FALSE}
+rm(list = ls())
+``` 
+ 
+

@@ -1,0 +1,8 @@
+The `glimpse()` command works on a `data.frame` or the
+new structure called a `tbl\_df` equally well.
+
+The `filter()` and `arrange()` commands make many of the
+examples seen earlier in this chapter much easier. The
+`filter()` command is for extraction, while `arrange()`
+is for rearrangement. For example, 
+

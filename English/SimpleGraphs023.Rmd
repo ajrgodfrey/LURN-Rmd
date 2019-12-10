@@ -1,0 +1,12 @@
+﻿
+```{r include=FALSE}
+BlindOrSightedText = ifelse(Blind, "There are numerous formal hypothesis tests that can assess the normality of a variable. Some of them are discussed in Section \\@ref(NormalityTests); they are  fairly easy to apply.",
+"")
+```
+
+`r BlindOrSightedText` ## Scatter plots {#ScatterPlots}
+
+Scatter plots are created using the `plot()` command by one of
+two methods. Figure \@ref(fig:AirQuality-ScatterTempWind) was created
+using 
+

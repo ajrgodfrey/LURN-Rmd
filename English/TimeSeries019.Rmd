@@ -1,0 +1,6 @@
+[Link to SVG version](../SVGs/TimeSeriesNileACF-1.html)
+
+To obtain the values of the autocorrelation function (or partial
+autocorrelation function) in text form, we add an argument to stop the
+results being plotted. 
+

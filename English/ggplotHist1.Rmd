@@ -1,0 +1,8 @@
+### Using the `ggplot2` package
+
+The `ggplot2` package builds a graph by adding components
+together. Sometimes the commands are a little less clear than we might
+see in the corresponding base R graphics.
+
+{#AirQualityHistWindWithGGPlot} 
+

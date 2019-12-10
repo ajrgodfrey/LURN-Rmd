@@ -1,0 +1,2 @@
+We often need to find the transpose of a matrix. The `t()` command does this. 
+

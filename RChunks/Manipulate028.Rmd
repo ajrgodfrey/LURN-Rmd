@@ -1,0 +1,6 @@
+
+```{r GrabRows4} 
+filter(airquality, Wind<10&Temp<60) 
+```  
+ 
+

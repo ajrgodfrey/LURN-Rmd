@@ -1,0 +1,6 @@
+```{r AirQuality-LinePlotTemp, fig.cap=FigCap}
+plot(Temp, ylim=c(50, 100)) 
+``` 
+
+ 
+

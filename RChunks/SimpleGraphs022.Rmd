@@ -1,0 +1,6 @@
+```{r AirQuality-NormPlotWind, fig.cap=FigCap} 
+qqnorm(Wind) 
+qqline(Wind) 
+``` 
+ 
+

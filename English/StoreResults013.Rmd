@@ -1,0 +1,3 @@
+﻿An even quicker method useful for a single result is to use the
+`cat()` command’s full potential: 
+

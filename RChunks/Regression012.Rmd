@@ -1,0 +1,6 @@
+```{r AirQuality-OzoneTempWithLine, fig.cap=FigCap} 
+plot(Ozone~Temp, data =airquality) 
+abline(Ozone.lm2) 
+```  
+ 
+

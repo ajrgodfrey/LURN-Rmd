@@ -1,0 +1,2 @@
+﻿and then see the structure of the data using the `glimpse()` function that is a substitute for the `str()` command we’ve used previously. 
+

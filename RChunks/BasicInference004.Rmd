@@ -1,0 +1,9 @@
+
+```{r BasicStats} 
+mean(precip) 
+sd(precip) 
+length(precip) 
+qt(0.975, length(precip)-1) 
+```  
+ 
+

@@ -1,0 +1,12 @@
+MyChart=qcc(Yarn, type="xbar", std.dev = "UWAVE-R", add.stats=TRUE, title="")
+title(expression(paste(bar(x), " chart for Yarn, using ",bar(R), " estimate of ", sigma)) )
+summary(MyChart)
+```
+
+```{r XBarS}
+MyChart=qcc(Yarn, type="xbar", std.dev = "UWAVE-SD", add.stats=TRUE, title="")
+title(expression(paste(bar(x), " chart for Yarn, using ",bar(S), " estimate of ", sigma)) )
+summary(MyChart)
+``` 
+ 
+

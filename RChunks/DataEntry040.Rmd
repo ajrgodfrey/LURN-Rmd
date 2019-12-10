@@ -1,0 +1,7 @@
+
+```{r Dates2} 
+Sys.Date() 
+class(Sys.Date()) 
+```  
+ 
+

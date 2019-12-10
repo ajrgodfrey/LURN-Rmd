@@ -1,0 +1,6 @@
+
+```{r UseVariable} 
+12*x 
+```  
+ 
+

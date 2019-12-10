@@ -1,0 +1,8 @@
+
+```{r MeansDF} 
+colMeans(airquality[,1:4]) 
+colMeans(airquality[,1:4], na.rm=TRUE) 
+mean(airquality[,1], na.rm=TRUE) 
+```  
+ 
+

@@ -1,0 +1,6 @@
+
+```{r GetData, eval=FALSE} 
+data(airquality) 
+```  
+ 
+

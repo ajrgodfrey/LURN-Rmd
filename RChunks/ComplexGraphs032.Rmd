@@ -1,0 +1,6 @@
+
+```{r MtEdenContour, fig.cap=FigCap} 
+contour(volcano) 
+```  
+ 
+

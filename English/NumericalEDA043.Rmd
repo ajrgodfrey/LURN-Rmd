@@ -1,0 +1,4 @@
+which is more long-winded than just using the `mean()` command
+alone. The value of `summarise()` becomes more evident when we
+seek the means for groups within our data, such as: 
+

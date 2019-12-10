@@ -1,0 +1,6 @@
+The `as.factor()` command tells R that these numbers are to be
+thought of as non-numeric data. A `factor` also has an
+associated attribute called `levels`. We can edit the levels
+directly and this will change our entire variable.
+{#UseOfLevels} 
+

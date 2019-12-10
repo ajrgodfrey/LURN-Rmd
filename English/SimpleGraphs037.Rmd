@@ -1,0 +1,6 @@
+﻿These values are then plotted in Figure \@ref(fig:StateRegion-BarChart2).
+
+```{r include=FALSE}
+FigCap="A bar chart showing which of the regions each of the fifty U.S.
+states belongs"
+```

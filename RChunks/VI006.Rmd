@@ -1,0 +1,6 @@
+
+```{r SaveHistory, eval=FALSE} 
+savehistory("WhatIDidToday.txt") 
+```  
+ 
+

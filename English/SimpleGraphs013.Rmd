@@ -1,0 +1,21 @@
+﻿[Link to SVG version](../SVGs/`r SVGName`.html)  
+
+Notice that I’ve changed the default orientation of the boxplot by
+adding the argument `horizontal=TRUE` to the
+`boxplot()` command. I have also ensured the more informative
+axis label for wind speed is included using the `xlab` argument in the command.
+
+### Comparative boxplots
+
+Boxplots are often useful for comparing several small samples at once.
+We must ensure that the same axis is used for the units of measure of
+interest and the easiest way to ensure this is to put the various
+samples into the same graphic with only one axis rather than having a
+series of single boxplots each having their own axis.
+
+For the purposes of illustration, I want to show the distribution of the
+daily average wind speeds for the five months separately.
+
+```{r include=FALSE}
+FigCap="A comparative boxplot showing the wind speed measurements for each month."
+```

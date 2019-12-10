@@ -1,0 +1,6 @@
+
+```{r ChSetup, include=FALSE, purl=FALSE}
+opts_chunk$set(fig.path='figures/BasicInference', out.width="0.7\\textwidth") 
+```  
+ 
+

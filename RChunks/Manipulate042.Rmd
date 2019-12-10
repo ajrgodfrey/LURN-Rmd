@@ -1,0 +1,6 @@
+
+```{r ExtractSampleFrac} 
+airquality %>% sample_frac(0.05) 
+```  
+ 
+

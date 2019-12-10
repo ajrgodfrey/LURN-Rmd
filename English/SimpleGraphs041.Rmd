@@ -1,0 +1,7 @@
+﻿and re-create the bar chart accordingly (see
+Figure \@ref(fig:StateRegion-BarChartImp) ).
+
+```{r include=FALSE}
+FigCap="An improved bar chart showing which of the regions each of the
+fifty U.S. states belongs"
+``` 

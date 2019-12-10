@@ -1,0 +1,58 @@
+# LURN… To Use R as a Scientific Calculator{#ScientificCalculator} 
+
+
+```{r setup, include=FALSE, purl=FALSE} 
+rm(list = ls())
+if (!file.exists("Data")) dir.create("Data")
+if (!file.exists("figures")) dir.create("figures")
+if (!file.exists("tables")) dir.create("tables")
+if (!file.exists("Other")) dir.create("Other")
+set.seed(222664)
+options(width = 60,  digits = 4, continue="   ")
+library(knitr)
+opts_chunk$set(fig.width=7, fig.height=5, comment="")
+Blind = file.exists("Blind.bat")
+FigCap="To FIX"
+``` 
+ 
+
+
+```{r ChSetup, include=FALSE, purl=FALSE}
+opts_chunk$set(fig.path='figures/Scientific', out.width="0.7\\textwidth") 
+```  
+ 
+
+This chapter explains how to use R as a scientific calculator, including
+its use of trigonometric functions. We’ll also plot some of the
+functions for illustrative purposes.
+
+## Trigonometric functions
+
+R has a series of commands that all perform quite similarly. The only
+real issue is to find out what actual commands get what we want. First
+of all, we need to know how R will work with degrees or radians. 
+
+
+```{r BasicTrig} 
+pi 
+sin(pi/6) 
+sin(30) 
+```  
+ 
+
+So our experiment shows us that R is working in radians.
+
+The functions `sin()` , `cos()` , and `tan()` give the sine, cosine, and tangent respectively. To find the inverse
+sine, sometimes called the arcsine, we use the `asin()` command.
+The hyperbolic functions associated with these functions also exist; use
+`sinh()` , `cosh()` and `tanh()` and for the
+inverse, just add an extra `a` before the command named here.
+
+## Graphs of trigonometric functions 
+
+```{r cleanup, include=FALSE, purl=FALSE}
+rm(list = ls())
+``` 
+ 
+
+

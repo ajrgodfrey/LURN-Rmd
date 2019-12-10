@@ -1,0 +1,6 @@
+
+```{r Colors, eval=FALSE} 
+colors() 
+```  
+ 
+

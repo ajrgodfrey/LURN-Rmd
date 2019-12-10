@@ -1,0 +1,26 @@
+﻿[Link to SVG version](../SVGs/ComplexGraphsLayoutDiffSizes-1.html)
+
+Note that the way the points have been plotted and the way the text
+appears in these graphs, differs. The addition of the `cex` argument in the third and fourth `plot()`  ommands forces the
+size of the plotted symbol to be reduced. This is known as character
+expansion , and can be applied to the text that appears on the graphs as well. Individual elements of text are adjusted using the `cex.main`, `cex.sub`, `cex.lab`  , and `cex.axis` arguments. See the help for the `par()` command for further details on their use.
+
+## Using colour or different symbols
+
+We show how to create a graph with different colours and symbols without
+passing judgement on the suitability of the colours or symbols used. The
+important feature to remember when you are about to create such a graph
+is that the reader will not necessarily see the difference in colour as
+you do. Similarly, the selection of symbol should be thought out
+carefully. We do not want a solid symbol to appear bigger than a hollow
+one or vice versa.
+
+We use the `iris` data supplied with R for this example. It
+has five variables in all; four are for numeric measurements and the
+fifth is the species. In Figure \@ref(fig:IrisInColour) we use three
+colours for the species and in Figure \@ref(fig:IrisInSymbols) we use different symbols. There is no reason why you might not use both arguments in combination to use different colours for the different symbols.
+
+```{r include=FALSE}
+FigCap="Sepal length and width plotted using different colours for
+representing species. "
+```

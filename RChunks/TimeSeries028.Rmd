@@ -1,0 +1,8 @@
+
+```{r NileHoltWinters, fig.cap=FigCap} 
+Nile.hw1 = HoltWinters(Nile, beta=FALSE, gamma = FALSE) 
+Nile.hw1 
+plot(Nile.hw1) 
+```    
+ 
+

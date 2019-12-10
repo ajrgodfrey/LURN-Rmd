@@ -1,0 +1,7 @@
+
+```{r EnterText} 
+Names = c("Jonathan", "Elizabeth", "Peter", "Jenna", "Callum", "Annabelle", "Cordelia") 
+Names 
+```  
+ 
+

@@ -1,0 +1,7 @@
+
+```{r CreateDF2} 
+MyFirstDF = data.frame(Names, Human) 
+str(MyFirstDF) 
+```  
+ 
+

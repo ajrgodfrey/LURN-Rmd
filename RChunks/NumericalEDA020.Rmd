@@ -1,0 +1,6 @@
+
+```{r TApply3} 
+tapply(Wind, Month, summary) 
+```  
+ 
+

@@ -1,0 +1,2 @@
+Applying the `summary()` command to the `air quality` data gives: 
+

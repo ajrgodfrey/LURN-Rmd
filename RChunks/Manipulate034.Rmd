@@ -1,0 +1,6 @@
+
+```{r MutateData} 
+airquality %>% mutate(TempC = (Temp - 32) * 5 / 9) %>% head() 
+```  
+ 
+

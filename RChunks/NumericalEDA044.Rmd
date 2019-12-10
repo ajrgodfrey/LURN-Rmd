@@ -1,0 +1,6 @@
+
+```{r WindSpeedByMonth} 
+airquality%>% group_by(Month) %>% summarise(mean(Wind, na.rm = TRUE)) 
+```  
+ 
+

@@ -1,0 +1,6 @@
+
+```{r GlimpseAirQuality} 
+glimpse(airquality) 
+```  
+ 
+

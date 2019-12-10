@@ -1,0 +1,6 @@
+
+```{r SortedTApply3} 
+rev(sort(tapply(Wind, Month, mean))) 
+```  
+ 
+

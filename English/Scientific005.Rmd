@@ -1,0 +1,10 @@
+So our experiment shows us that R is working in radians.
+
+The functions `sin()` , `cos()` , and `tan()` give the sine, cosine, and tangent respectively. To find the inverse
+sine, sometimes called the arcsine, we use the `asin()` command.
+The hyperbolic functions associated with these functions also exist; use
+`sinh()` , `cosh()` and `tanh()` and for the
+inverse, just add an extra `a` before the command named here.
+
+## Graphs of trigonometric functions 
+

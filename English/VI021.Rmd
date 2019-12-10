@@ -1,0 +1,35 @@
+﻿Take a look in the `AirQuality` folder that has been created in your working
+directory. It has a number of files that all start with “Ozone" --- the
+name of the variable being analysed. You will also have three files
+stored in the current working directory which have the filename `Ozone-UniDesc.*` where
+the star is for the extension which is one of `html`, `R`, and `Rmd`.
+
+The most useful one at first is the `Ozone-UniDesc.html` file. Open this file in a browser to
+see what analyses have been included. This file is specifically
+formatted for use with screen readers. I hope you find it valuable. If
+you are reading this document on the web, then the link
+[Ozone-UniDesc.html](Ozone-UniDesc.html) will open it in your browser. N.B. This link will not work if you are using the \file{pdf} version of LURN.
+
+The commands used to generate parts of this HTML document are given in
+the R script file; the third file is called an R markdown document. This
+is the file that gets converted into the other two files. It might prove
+useful to learn how to write this kind of file for yourself one day.
+
+In the subfolder you will find that graphs have been saved in a variety
+of formats. They each have their uses and hopefully the filetype you
+need is there. Special attention is made for those users of LaTeX who
+need specific formats for graphics. Some more advanced information is
+presented in LaTeX formatted tables and put into files with the `.tex` extension. 
+
+Whenever the `VI()` function is employed on an object that does
+not yet have an explicit function tied to it, then you will be told that
+this is the case. This package is a work in progress after all. Please
+feel free to send an email if you’d like any extra functionality.
+
+## Altering R output to make it easier to read
+
+Some R output is arranged in nice tables that are easy for the sighted
+user to read, but are difficult to understand if using synthesised
+speech to read the information back to you. The `VI()` command
+is used again here but is now employed on a `data.frame` object. We’ll compare it with the `summary()` command used frequently. 
+

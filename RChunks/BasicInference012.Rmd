@@ -1,0 +1,6 @@
+
+```{r TTest1} 
+t.test(precip) 
+```  
+ 
+

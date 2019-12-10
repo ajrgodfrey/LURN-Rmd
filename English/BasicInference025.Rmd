@@ -1,0 +1,19 @@
+﻿So it seems the two variables are correlated and have a monotonic
+relationship that implies that as wind speed increases the amount of ozone
+decreases and that this relationship is fairly linear. We will look at
+this relationship again when we look at linear regression in
+Chapter \@ref(Regression).
+
+## Testing the independence of two categorical variables
+
+using the chisq.test command. Refer graphical representation to the
+`vcd` package.
+
+## Testing the normality of a distribution {#NormalityTests}
+
+norm test package here.
+
+We can use the `ks.test()` function for the Kolmogorov-Smirnov
+test. It is suitable for comparing two samples, or a single sample
+against a theoretical distribution, or the `shapiro.test()` function which is specifically for testing for normality. 
+

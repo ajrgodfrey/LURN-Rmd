@@ -1,0 +1,7 @@
+
+```{r CreateIdentity} 
+I3=diag(3) 
+I3 
+```  
+ 
+

@@ -1,0 +1,6 @@
+
+```{r ChooseUsingText, eval=FALSE}
+chooseCRANmirror(FALSE)
+``` 
+ 
+

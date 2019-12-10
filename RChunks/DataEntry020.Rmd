@@ -1,0 +1,6 @@
+
+```{r UseLogical} 
+Names[Human] 
+```  
+ 
+

@@ -1,0 +1,5 @@
+```{r ReorderRegions} 
+summary(state.region)[c(4,2,3,1)] 
+```  
+ 
+

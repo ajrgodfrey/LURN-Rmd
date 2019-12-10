@@ -1,0 +1,11 @@
+﻿extracts the rows of the `airquality` data that meet the
+combinations of conditions specified. Use of `filter()` means we
+don’t need the `data.frame` attached, or to gain access to the
+variables in it using the dollar notation; we also don’t need the square
+brackets for common subscripting tasks. We could have stored the outcome
+in a new `data.frame` if we wished.
+
+Perhaps the greatest gift of the `dplyr` package is its
+popularising a different way of combining commands, called the pipe
+operator. The last command issued can be re-written as: 
+

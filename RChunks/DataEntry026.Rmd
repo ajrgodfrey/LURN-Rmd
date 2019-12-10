@@ -1,0 +1,6 @@
+
+```{r UseSubscript2} 
+Names[2:3] 
+```  
+ 
+

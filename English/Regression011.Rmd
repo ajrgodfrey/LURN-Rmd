@@ -1,0 +1,5 @@
+
+```{r include=FALSE}
+FigCap="A scatter plot of Ozone versus temperature, with the fitted line from the simple regression added."
+``` 
+

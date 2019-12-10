@@ -1,0 +1,12 @@
+```{r GGPlotHistWind}
+g = ggplot(airquality, aes(Wind)) + geom_histogram()
+g
+```
+\Blind{
+```{r }
+BrailleR::VI(g)
+```
+}
+[Link to SVG version](../SVGs/SimpleGraphsGGPlotHistWind-1.html)  
+ 
+

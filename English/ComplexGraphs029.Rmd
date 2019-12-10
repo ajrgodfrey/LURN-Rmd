@@ -1,0 +1,5 @@
+[Link to SVG version](../SVGs/ComplexGraphsClusterBar-1.html)
+
+```{r include=FALSE}
+FigCap="An example of a stack bar chart"
+``` 

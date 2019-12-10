@@ -1,0 +1,8 @@
+
+```{r BasicStats} 
+#median(airquality[,1:4], na.rm=TRUE) 
+min(airquality[,1:4], na.rm=TRUE) 
+max(airquality[,1:4], na.rm=TRUE) 
+```  
+ 
+

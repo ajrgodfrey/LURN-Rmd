@@ -1,0 +1,7 @@
+The `stl()` command uses loess smoothing to estimate the
+trend component before finding the seasonal components and the resulting
+error terms, and is a slightly more advanced process than that offered
+by `decompose()`. N.B. there is an `stl()` command in
+the `stats` package and another in the `forecast` package. We use the simpler one here but need to force R to do so just
+in case the `forecast` package version has precedence. 
+

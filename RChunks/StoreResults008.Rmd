@@ -1,0 +1,8 @@
+
+```{r CreateSinkFile, eval=-3, results='hide'} 
+sink(".\\other\\JustPrintX.txt") 
+x 
+sink() 
+```  
+ 
+

@@ -1,0 +1,5 @@
+```{r AirQuality-ScatterPlotMatrix, fig.cap=FigCap} 
+pairs(data.frame(Ozone, Solar.R, Wind, Temp)) 
+```  
+ 
+

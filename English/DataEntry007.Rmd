@@ -1,0 +1,4 @@
+We can also use some basic mathematical functions such as the logarithm
+and square root via the `log()` and `sqrt()` commands —
+many other commands like this exist\! For example 
+

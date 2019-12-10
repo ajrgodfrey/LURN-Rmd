@@ -1,0 +1,6 @@
+
+```{r GrabRows2} 
+subset(airquality, Wind<10 & Temp<60)
+```  
+ 
+

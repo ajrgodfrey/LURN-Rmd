@@ -1,0 +1,6 @@
+
+```{r VolcanoExample, eval=FALSE} 
+example(volcano) 
+```  
+ 
+

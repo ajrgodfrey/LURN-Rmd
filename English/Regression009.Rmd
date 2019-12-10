@@ -1,0 +1,11 @@
+## Presenting the straight line model’s suitability in a graph {#AddFittedLine}
+
+Adding a fitted line to the scatter plot when a simple relationship has
+been fitted is actually a very simple task. Note that when we saw the
+outcome of the simple model above, we obtained just the intercept and
+slope coefficient values until we employed the `summary()` method to extract more useful information. These two values will be used by the `abline()` function to add the straight line to an
+existing plot. See Figures \@ref(fig:AirQuality-OzoneWindWithLine) and \@ref(fig:AirQuality-OzoneTempWithLine) for example.
+
+```{r include=FALSE}
+FigCap="A scatter plot of Ozone versus Wind, with the fitted line from the simple regression added."
+``` 

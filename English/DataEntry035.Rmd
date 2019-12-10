@@ -1,0 +1,10 @@
+﻿Whatever you do you should observe the way your series is coming out. I
+would have expected the `each` to be used in the last example
+not `times` for example — always check.
+
+## An incomplete pattern
+
+Let’s say we want a set of numbers to be cycled, but know that we won’t
+use the full cycle. The `rep()` has an argument that can stop
+the process early for us. Try using the `length.out` argument as follows 
+

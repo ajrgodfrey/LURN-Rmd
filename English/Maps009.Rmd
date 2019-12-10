@@ -1,0 +1,54 @@
+﻿[Link to SVG version](../SVGs/MapsPartNZ-1.html)
+
+One challenge in making this graphic presentable for this document was
+assuring myself that the aspect ratio was correct. Latitudes and
+longitudes do not take up equal space especially as you move further
+from the tropics. R will get the aspect ratio correct but being sure is
+another matter.
+
+The graph I first created for this example was 5.7cm high and just over
+10cm wide. Was it in proportion though? If each degree of latitude in
+the map used 1cm of space, we would expect each degree of longitude to
+take up at most 1 cm of space. An approximation for this is found by
+multiplying the latitude space by $\cos(\theta)$ where $\theta$ is
+the latitude. So each degree of longitude in my plot should take up
+about `r round(cos(2*pi*40.5/360),2)`  of the space of
+each degree of latitude. I’ve plotted three degrees of latitude and
+seven degrees of longitude, so I expect my 5.7cm high graphic to be
+$$\frac{5.7}
+{3} \times 7 \times `r round(cos(2*pi*40.5/360),2)`  == `r round(1.9*7*cos(2*pi*40.5/360),1)` $$ centimetres in
+width. This was about right.
+
+You can see the way we would do this calculation using R in
+Chapter \@ref(ScientificCalculator).
+
+## Using Google’s services to map locations of interest
+
+
+The database used for creating Figures  \@ref(fig:WholeNZ)  and \@ref(fig:PartNZ) 
+predates the last New Zealand census. I now know that my home city no longer has a population in the range I used above. A smarter way to find locations is therefore necessary if the example is going to survive the next database update.
+
+
+The ability to search Google for specific locations is really useful,
+especially if you intend plotting maps with points of interest such as
+universities rather than just cities. Our first example does look for
+cities though, so that it builds on examples from previous sections in
+this chapter.
+
+In mid-2015, I attended the UseR conference in Aalborg, which is in
+Denmark. I know Denmark has a coastline and is bordered by Germany, but
+actually I don’t know much else (especially where individual cities
+are\!). I wanted to know where the city of Aalborg is in relation to
+Copenhagen (the capital of Denmark). 
+
+I discovered that the functionality of this section is dependent on having a registration key with the Google Maps API. I could do this, but sharing my registration key is not smart. To run the rest of the example below, you will need to get your own registration key.
+
+With the help of the
+`ggmap` package tapping into Google maps, I can find the
+latitute and longitude for both cities and then plot them on the map of
+Denmark as follows: 
+
+
+```{r include=FALSE}
+FigCap="Map of Denmark using all data from the database."
+``` 

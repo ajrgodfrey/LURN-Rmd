@@ -1,0 +1,6 @@
+
+```{r eval=FALSE} 
+install_source("NewPackage_1.0.tar.gz") 
+```  
+ 
+

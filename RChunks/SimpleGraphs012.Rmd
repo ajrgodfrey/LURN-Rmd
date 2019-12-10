@@ -1,0 +1,24 @@
+```{r include=FALSE}
+SVGName = "AirQuality-BoxplotWind"
+```
+```{r AirQuality-BoxplotWind, fig.width=7, fig.height=5, eval=ifelse(Blind, c(3,4), 2), echo=ifelse(Blind, c(1,3,4), c(1,2)), fig.cap=FigCap} 
+windows(7, 5) 
+boxplot(Wind, horizontal=TRUE, xlab="Wind speed (mph)")
+MyBoxplot = boxplot(Wind, horizontal=TRUE, xlab="Wind speed (mph)")
+VI(MyBoxplot)
+```
+
+```{r AirQuality-BoxplotWindSVG, eval=Blind, echo=FALSE}
+cat(paste0('
+attach(airquality)
+MyBoxplot = boxplot(Wind, horizontal=TRUE, xlab="Wind speed (mph)")
+MakeAccessibleSVG(MyBoxplot, "SVGs/', SVGName, '", view=FALSE)
+detach(airquality)
+'),
+file="RunLater.R", append=TRUE)
+```
+
+
+
+ 
+

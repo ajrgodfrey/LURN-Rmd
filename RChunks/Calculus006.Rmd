@@ -1,0 +1,6 @@
+
+```{r EvalMySine>> 
+MySine(c((0:4)*pi/2)) 
+```  
+ 
+

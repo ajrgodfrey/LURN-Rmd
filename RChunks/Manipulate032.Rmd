@@ -1,0 +1,6 @@
+
+```{r HottestDays} 
+airquality2 %>% arrange(desc(Temp)) 
+```  
+ 
+

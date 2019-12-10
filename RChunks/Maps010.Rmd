@@ -1,0 +1,10 @@
+
+```{r Denmark, fig.cap=FigCap} 
+#Places = geocode(location=c("Aalborg", "Copenhagen")) 
+#Places 
+map('worldHires', 'Denmark') 
+title('Denmark') 
+#points(Places, pch=16) 
+```  
+ 
+

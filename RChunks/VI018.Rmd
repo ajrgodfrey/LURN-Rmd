@@ -1,0 +1,5 @@
+```{r VIDotplot} 
+VI(dotplot(airquality$Wind, xlab="Average wind speed (mph)")) 
+``` 
+ 
+

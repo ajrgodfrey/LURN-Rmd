@@ -1,0 +1,96 @@
+# LURN… To Use R for Basic Calculus Tasks{#Calculus} 
+
+
+```{r setup, include=FALSE, purl=FALSE} 
+rm(list = ls())
+if (!file.exists("Data")) dir.create("Data")
+if (!file.exists("figures")) dir.create("figures")
+if (!file.exists("tables")) dir.create("tables")
+if (!file.exists("Other")) dir.create("Other")
+set.seed(222664)
+options(width = 60,  digits = 4, continue="   ")
+library(knitr)
+opts_chunk$set(fig.width=7, fig.height=5, comment="")
+Blind = file.exists("Blind.bat")
+FigCap="To FIX"
+``` 
+ 
+
+
+```{r ChSetup, include=FALSE, purl=FALSE}
+opts_chunk$set(fig.path='figures/') 
+```  
+ 
+
+This chapter explains how various tasks in introductory calculus can be
+undertaken using R.
+
+## Creating mathematical expressions
+
+Before we embark on doing those fun things we want to do, we need to
+learn how to store a mathematical expression as an object in R. There
+are many keywords that appear in these expressions which are translated
+to symbols when seen printed in a graph window but remain in ordinary
+text in R commands. Such symbols include Greek letters, hats and bars,
+all of which have a meaning.
+
+## Plotting functions
+
+This can be a lot of fun if you set things up right to start with. We
+create a `function` to represent the mathematical expression
+using the `function()` command, then plot it using either the
+`plot.function()` or `curve()` commands. 
+
+
+```{r SineCurve} 
+MySine <- function(x){ sin(x)} 
+curve(MySine, -4*pi, 2*pi, n = 2001) 
+```  
+ 
+
+[Link to SVG version](../SVGs/CalculusSineCurve-1.html)
+
+You can use any valid mathematical expression in the
+`function` you create. You might find it useful to test your
+idea= values for your inputs that are easy to work with, such as zero
+and one. You could then use integers, including negative integers, but
+it could be easier to test your functions using values that lead to
+identifiable results such as multiples of $\pi$ when working with
+trigonometric functions. For example: 
+
+
+```{r EvalMySine>> 
+MySine(c((0:4)*pi/2)) 
+```  
+ 
+
+## Differentiation
+
+The internal code used for differentiation in R is not as comprehensive
+as other mathematical software. It can handle arithmetic operators `+`, `-`, `\*`, `/`, and `^`, and the single-variable functions `exp()`, `log()` (natural logarithm), `sin()`, `cos()`, `tan()`, `sinh()`, `cosh()`, `sqrt()`, `pnorm()`, `dnorm()`, `asin()` (inverse sine), `acos()` (inverse cosine), `atan()` (inverse tangent), and various `gamma()` functions. The functions `pnorm()` and `dnorm()` are restricted to the standard
+normal distribution.
+
+The easiest way to find the derivative of an expression is to store the
+mathematical function using the `expression()` command, and then
+use the `D()` or `deriv()` commands. 
+
+
+```{r Derivation} 
+y=expression(exp(2*x)) 
+D(y,"x") 
+```  
+ 
+
+Nice that the answer comes out correct, albeit in a slightly different
+way to what we might expect, because the answer has the multiplication
+by 2 at the end instead of the more familiar $2e^{2x}$ wee expect to
+see when explicit multiplication signs are not used. Also note that the
+second argument to the `D()` function needs quote marks around
+it. 
+
+```{r cleanup, include=FALSE, purl=FALSE}
+rm(list = ls())
+``` 
+ 
+
+

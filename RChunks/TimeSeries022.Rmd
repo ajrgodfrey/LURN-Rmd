@@ -1,0 +1,6 @@
+
+```{r getAustResData} 
+str(austres) 
+```  
+ 
+

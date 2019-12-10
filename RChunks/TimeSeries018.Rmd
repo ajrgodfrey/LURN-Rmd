@@ -1,0 +1,6 @@
+
+```{r NileACF, fig.cap=FigCap} 
+acf(Nile) 
+```  
+ 
+

@@ -1,0 +1,16 @@
+[Link to SVG version](../SVGs/`r SVGName`.html)  
+
+```{r include=FALSE}
+BlindOrSightedText = ifelse(Blind, "### A note on the visual appearance of the standard histogram for blind users",
+"")
+```
+
+`r BlindOrSightedText` 
+
+`r if(Blind){Describe(MyHist)$general}` 
+
+## Basic annotations to graphs
+
+```{r include=FALSE}
+FigCap="A histogram showing the wind speed measurements."
+```

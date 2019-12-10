@@ -1,0 +1,10 @@
+﻿The tilde symbol is often read as “…is distributed as…" but we might
+simplify this to be read as “follows". This makes some sense as we
+generally create a scatter plot to see if one variable follows the
+other; in this case we are seeing if temperature depends on wind speed
+in some way. I prefer this approach as it matches what we do when fitting a regression model, see Chapter \@ref(Regression) to see this demonstrated.
+
+
+```{r include=FALSE}
+FigCap = "A scatter plot showing temperature on the y axis and wind speed on the x axis."
+```

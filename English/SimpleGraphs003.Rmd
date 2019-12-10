@@ -1,0 +1,15 @@
+﻿This chapter illustrates the construction of some basic exploratory data
+analysis graphs. More complex graphs are considered in
+Chapter \@ref(GraphsWithExtras), although at times we will see graphs
+presented in conjunction with particular statistical analysis techniques
+in other chapters. In this chapter, we concentrate on data taking
+continuous values initially, but a short section on graphs for discrete
+valued variables is also included.
+
+There are many ways to create statistical graphs. The traditional method
+uses one of the base R packages, but in recent years, the
+`ggplot2` package [@Rpkg-ggplot2] has gained considerable attention. The
+presentation of both styles of graph are given throughout this chapter.
+You will need to ensure the `ggplot2` package is available for
+use in your R session by issuing the command: 
+

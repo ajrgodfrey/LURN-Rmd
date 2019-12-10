@@ -1,0 +1,9 @@
+Notice that I’ve used a capital letter for the matrix version of the
+same set of numbers here which is possible because R is case sensitive.
+The `ncol` argument can be replaced by using the
+`nrow` argument if a row vector is required.
+
+## Creating some simple matrix structures
+
+The identity matrix is a diagonal matrix so we use the `diag()` command to create it. For example 
+

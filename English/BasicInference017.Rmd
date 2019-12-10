@@ -1,0 +1,3 @@
+We employ the `t.test()` command with the `paired` argument set to `TRUE`. We can use either of two approaches.
+Either we separate the two groups apart using subscripting 
+

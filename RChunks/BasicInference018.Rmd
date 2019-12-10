@@ -1,0 +1,6 @@
+
+```{r TTest3} 
+t.test(extra[group=="1"], extra[group=="2"], paired=TRUE) 
+```  
+ 
+

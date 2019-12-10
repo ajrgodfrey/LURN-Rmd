@@ -1,0 +1,6 @@
+
+```{r ShowIdentity} 
+M%*%ginv(M) 
+```  
+ 
+

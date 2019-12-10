@@ -1,0 +1,6 @@
+
+```{r IrisInSymbols, fig.cap=FigCap} 
+plot(Petal.Length~Petal.Width, data=iris, xlab="Petal width", ylab="Petal length", pch=as.numeric(Species)) 
+```  
+ 
+

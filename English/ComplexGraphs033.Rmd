@@ -1,0 +1,10 @@
+﻿[Link to SVG version](../SVGs/ComplexGraphsMtEdenContour-1.html)
+
+This provides a black and white image that has the contours marked with
+the value of the third variable. A coloured version of the plot is
+available using the `filled.contour()` command in place of the
+`contour()` command in Figure \@ref(fig:MtEdenContour). An even
+more impressive version of this plot can be obtained by looking at the
+example that accompanies the help for the `volcano` data.
+Typing: 
+

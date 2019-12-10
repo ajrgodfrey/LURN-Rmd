@@ -1,0 +1,6 @@
+
+```{r IrisInColour, fig.cap=FigCap} 
+plot(Sepal.Length~Sepal.Width, data=iris, xlab="Sepal width", ylab="Sepal length", col=Species) 
+```  
+ 
+

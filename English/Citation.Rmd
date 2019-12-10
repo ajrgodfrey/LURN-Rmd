@@ -1,0 +1,45 @@
+﻿
+Please include the following details when citing this publication as a
+single volume.
+
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Author:</td>
+<td style="text-align: left;">Godfrey, A. Jonathan R.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Year:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Title:</td>
+<td style="text-align: left;"><p>LURN: Let’s Use R Now</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Publisher:</td>
+<td style="text-align: left;">Institute of Fundamental Sciences, Massey University</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Location:</td>
+<td style="text-align: left;">Palmerston North, New Zealand</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><p>ISBN</p></td>
+</tr>
+</tbody>
+</table>
+
+This e-text is made available for education purposes without any claim
+for financial recompense from the author. It is however intended that
+any use of the e-text, whether wholly or in part, be done with all
+parties being aware that the work is made available to any third party
+under the same conditions as placed on this volume.
+
+This work is licensed under the Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License. To
+view a copy of this license, visit
+<http://creativecommons.org/licenses/by-nc-nd/4.0/> or send a letter to
+Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. 
+

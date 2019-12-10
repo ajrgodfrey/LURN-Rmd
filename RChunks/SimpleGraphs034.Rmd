@@ -1,0 +1,5 @@
+```{r StateRegion-BarChart, fig.cap=FigCap} 
+plot(state.region) 
+```  
+ 
+

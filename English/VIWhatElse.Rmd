@@ -1,0 +1,7 @@
+## What else?
+
+Future developments in the `BrailleR` package will be made to meet demand.
+If you do want some additional functionality that you think is likely to
+be wanted by others then please do add to the wish list. Current ideas
+on the wish list include:  - Easier to interpret multiple regression output.  - Easier to interpret principal component analysis output.  - More graph types being described using the `VI()` command.  - Easier to interpret factor analysis output. 
+

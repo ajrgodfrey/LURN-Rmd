@@ -1,0 +1,6 @@
+
+```{r ChooseCloud, eval=FALSE}
+chooseCRANmirror(ind=1)
+``` 
+ 
+

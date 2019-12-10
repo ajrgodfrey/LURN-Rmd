@@ -1,0 +1,9 @@
+## Time series plots
+
+We have seen the flexibility of the `plot()` command in previous
+chapters, and now we see another use. Applying the `plot()` command to a time series object generates a time series plot, as seen in
+Figure \@ref(fig:NileTSPlot).
+
+```{r include=FALSE}
+FigCap="Time series plot for the annual flow of the River Nile."
+``` 

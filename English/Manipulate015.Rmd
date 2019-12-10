@@ -1,0 +1,11 @@
+﻿An explanation of this command is given in
+Section \@ref(DataFromPackages). This data set has its own help page
+that can be viewed by typing `?airquality` at the R prompt.
+
+We can ask for the rows of this data that match specified details using the `subset()` command. Various operators exist for numerical comparisons; the
+simplest of which are `<` and `>`. For the purposes of brevity in presenting the results of the following examples
+that follow, we use the `nrow()`  command to show how many
+observations in the data meet the specified conditions. The following
+commands extract the number of days where the wind speed was less than
+ten miles per hour and then the temperature was less than 60 degrees Fahrenheit. 
+

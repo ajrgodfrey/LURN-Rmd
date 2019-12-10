@@ -1,0 +1,6 @@
+
+```{r MakeTSTemp} 
+Temp.ts = as.ts(airquality$Temp) 
+```  
+ 
+

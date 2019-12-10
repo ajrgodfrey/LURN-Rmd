@@ -1,0 +1,8 @@
+
+```{r ShowPrintHist} 
+MyHist 
+str(MyHist) 
+class(MyHist) 
+```  
+ 
+

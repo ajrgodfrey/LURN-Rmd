@@ -1,0 +1,5 @@
+```{r OzoneLM3} 
+Ozone.lm3 = lm(Ozone~Wind+Temp, data=airquality) 
+```  
+ 
+

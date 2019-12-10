@@ -1,0 +1,7 @@
+```{r GetDetails} 
+names(Ozone.lm1) 
+names(summary(Ozone.lm1)) 
+summary(Ozone.lm1)$r.squared 
+```  
+ 
+

@@ -1,0 +1,10 @@
+
+```{r NileTSPlot, fig.cap=FigCap} 
+plot(Nile, xlab="Year", ylab="Flow") 
+``` 
+
+```{r NilePlotSVG} 
+BrailleR::TimeSeriesPlot(Nile, xlab="Year", ylab="Flow") 
+``` 
+ 
+

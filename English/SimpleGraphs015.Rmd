@@ -1,0 +1,20 @@
+﻿[Link to SVG version](../SVGs/`r SVGName`.html)  
+
+This comparative boxplot is created using a formula to describe the
+relationship between the two variables that are referred to in our
+graph. The use of the tilde symbol between `Wind` and `Month`  could be read as something like “average wind speed
+depends on the month" — well a theory that might be illustrated in our
+graph anyway. Certainly it is the potential for this relationship to
+exist that may be exposed through use of the comparative boxplot.
+
+### Dotplots
+
+Dotplots aren’t everyone’s cup of tea but they are frequently offered as
+substitutes for boxplots and histograms. Again, I chose to alter the
+default window size for the example given in
+Figure \@ref(fig:AirQuality-DotPlotWind) because I didn’t like the way the regular graph window presented this graph.
+
+
+```{r include=FALSE}
+FigCap="A dotplot showing the wind speed measurements."
+```

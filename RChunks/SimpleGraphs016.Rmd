@@ -1,0 +1,19 @@
+```{r include=FALSE}
+SVGName = "AirQuality-DotplotWind"
+```
+```{r AirQuality-DotPlotWind, fig.width=7, fig.height=5, eval=ifelse(Blind, c(3,4), 2), echo=ifelse(Blind, c(1,3,4), c(1,2)), fig.cap=FigCap} 
+windows(7, 2.5) 
+dotchart(Wind) 
+MyDotplot = dotchart(Wind) 
+VI(MyDotplot)
+```
+
+```{r AirQuality-DotplotWindSVG, eval=Blind, echo=FALSE}
+cat(paste0('
+attach(airquality)
+MyDotplot = dotchart(Wind) 
+MakeAccessibleSVG(MyDotplot, "SVGs/', SVGName, '", view=FALSE)
+detach(airquality)
+'),
+file="RunLater.R", append=TRUE)
+```

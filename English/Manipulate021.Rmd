@@ -1,0 +1,13 @@
+
+## Use of the dplyr package for data manipulation {#DPlyRDataManipulation}
+
+The `dplyr` package [@Rpkg-dplyr] is an alternative to the basic R functionality shown in this chapter. The package creator (Hadley
+Wickham) wants his package to make data manipulation easier for the
+end-user, and more efficient with respect to computation time. He has
+simplified data manipulations to a small set of commands:
+`filter()`, `arrange()`, `sample\_n()`, `sample\_frac()`, `mutate()`, and `transmute()` are discussed here, while the others will be 
+discussed in Section \@ref(DPlyRDataSummarisation) where they are more
+relevant.
+
+You’ll need to install the package (see Section \@ref(InstallPackages) for instructions) before running the function 
+

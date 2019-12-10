@@ -1,0 +1,9 @@
+﻿Given this variable is a `factor` with four levels it is well
+suited to presentation in a bar chart, as seen in
+Figure \@ref(fig:StateRegion-BarChart).
+
+```{r include=FALSE}
+FigCap="A bar chart showing which of the regions each of the fifty U.S.
+states belongs"
+``` 
+

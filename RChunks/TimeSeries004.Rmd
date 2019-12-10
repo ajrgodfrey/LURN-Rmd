@@ -1,0 +1,8 @@
+
+```{r IntroData} 
+str(LakeHuron) 
+str(lynx) 
+str(Nile) 
+```  
+ 
+

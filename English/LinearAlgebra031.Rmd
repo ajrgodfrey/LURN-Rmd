@@ -1,0 +1,5 @@
+## Determinants and traces
+
+The `det()` command is used for finding the determinant of a
+matrix. 
+

@@ -1,0 +1,6 @@
+
+```{r VIBoxplot} 
+VI(boxplot(airquality$Wind, xlab="Average wind speed (mph)")) 
+```  
+ 
+

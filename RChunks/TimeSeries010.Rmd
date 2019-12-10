@@ -1,0 +1,8 @@
+
+```{r TSPlotsCompared, fig.height=8, fig.cap=FigCap} 
+par(mfrow=c(2,1))
+plot(airquality$Temp, ylab="Temperature") 
+plot(Temp.ts, ylab="Temperature") 
+```  
+ 
+
